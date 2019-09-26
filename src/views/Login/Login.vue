@@ -47,14 +47,14 @@
 </template>
 <script lang="ts">
 import { Component, Vue, Provide } from "vue-property-decorator";
-//import { State, Getter, Mutation, Action } from "vuex-class";
+import { State, Getter, Mutation, Action } from "vuex-class";
 import LoginHeader from "./LoginHeader.vue";
 @Component({
   components: { LoginHeader }
 })
 export default class Login extends Vue {
   // 存储用户信息
-  //@Action("setUser") setUser: any;
+  @Action("setUser") setUser: any;
 
   @Provide() isLogin: boolean = false;
   @Provide() ruleForm: {
@@ -85,7 +85,7 @@ export default class Login extends Vue {
             // 存储token
            localStorage.setItem("tsToken", res.data.token);
             // 存储到vuex中
-           //this.setUser(res.data.token);
+           this.setUser(res.data.token);
 
             // 登录成功 跳转 /
             this.$router.push("/");

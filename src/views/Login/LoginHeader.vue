@@ -3,10 +3,6 @@
     <div class="page-center">
       <div class="info">
         <div class="title">
-          <img src="@/assets/logo.png" alt />
-          <span>OnlineGame</span>
-        </div>
-        <div class="detail">
           <span>管控端平台</span>
         </div>
       </div>

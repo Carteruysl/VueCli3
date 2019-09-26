@@ -79,7 +79,7 @@ export default class Password extends Vue {
           .post("/api/users/findPwd", this.ruleForm)
           .then((res: any) => {
             this.loading = false;
-            // console.log(res.data);
+             console.log(res.data);
             this.$message({
               message: res.data.msg,
               type: "success"
